@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,800;1,700;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+@import "./buttons/buttons.scss";
+
+.title {
+    @apply text-6xl font-bold;
+}
+
+.header {
+    @apply text-[42px] font-bold;
+}
+
+.subtitle {
+    @apply text-[20px] font-bold;
+}
+
+.semi-subtitle {
+    @apply text-[16px] font-bold;
+}
+
+.paragraph {
+    @apply text-[16px];
+}
+
+@media screen and (width <=768px) {
+    .title {
+        @apply text-[20px] font-bold;
+    }
+
+    .header {
+        line-height: 1.2;
+        @apply text-[24px] font-bold;
+    }
+
+    .subtitle {
+        @apply text-[18px] font-bold;
+    }
+
+    .semi-subtitle {
+        @apply text-[18px] font-bold;
+    }
+
+    .paragraph {
+        @apply text-[15px];
+    }
+}
+
+.highlight-text {
+    color: transparent;
+    -webkit-text-stroke: 1px #22c55e;
+    letter-spacing: 5px;
+}
+
+.shape-1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.shape-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(180deg);
+}
+
+.circle {
+    animation: rotation 16s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+// =========================================
+//service section styling
+// =========================================
+
+#serviceWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    margin: 100px auto;
+    height: 100%;
+    padding: 20px;
+
+
+}
+
+#serviceWrapper>div {
+    text-align: center;
+    width: 100%;
+    padding: 30px 40px;
+    border-radius: 6px;
+    transition: .6s ease;
+
+    p {
+        color: #bcbcbc;
+    }
+}
+
+#serviceWrapper>div:hover {
+    p {
+        color: #fff;
+
+    }
+
+    h4 {
+        color: #22c55e;
+    }
+
+    img {
+        transform: translateY(-5px);
+        transition: .6s ease;
+    }
+
+}
+
+@media screen and (width >=768px) {
+    #serviceWrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (width >=1024px) {
+    #serviceWrapper {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
