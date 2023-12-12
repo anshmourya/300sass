@@ -6,10 +6,42 @@ import { Button } from "../ui/button";
 
 const Service = () => {
   const services = [
-    { label: "web development", icon: "/webdev.svg" },
-    { label: "video editing", icon: "/videoEditing.svg" },
-    { label: "thumbnail design", icon: "/thumbnail.svg" },
-    { label: "figma desing", icon: "/figma.svg" },
+    {
+      label: "Credit Crescendo: $10K SaaS Boost!",
+      icon: "/webdev.svg",
+      description:
+        "Unlock $10000 worth of credits for top saas tools. Organize, strategize, and boost your productivity to new heights. Streamline your operations seamlessly!",
+    },
+    {
+      label: "Tool Talk: Expert Reviews Await!",
+      icon: "/videoEditing.svg",
+      description:
+        "Get your tools critiqued by top investors, YC-funded entrepreneurs, and industry leaders. Exclusive monthly reviews await you, offering invaluable insights and exposure.",
+    },
+    {
+      label: "Shine Bright on 300saas!",
+      icon: "/thumbnail.svg",
+      description:
+        "Don't just list your tool; amplify it. Featuring on 300saas means exposure to tech influencers and potential investors. Watch as your visibility soars and your traffic spikes",
+    },
+    {
+      label: "Grow with Proven Strategies!",
+      icon: "/figma.svg",
+      description:
+        "Tap into the collective wisdom of successful startup veterans.  Gain exclusive access to growth strategies and scaling tips proven to succeed. Flash Card 5",
+    },
+    {
+      label: "Connect & Conquer!",
+      icon: "/figma.svg",
+      description:
+        "Join a vibrant community of SaaS innovators. Forge connections, collaborate, and open doors to new opportunities",
+    },
+    {
+      label: "Innovate First: SaaS Exclusives!",
+      icon: "/figma.svg",
+      description:
+        "Get early access to the latest SaaS products and features. Stay ahead of the curve and constantly innovate with 300saas.",
+    },
   ];
   return (
     <section
@@ -21,36 +53,29 @@ const Service = () => {
       <div className="container m-auto text-center">
         <div className="max-w-[800px] m-auto">
           <h2 className="mb-5 title">
-            What Makes <span className="rounded-md bg-primary">Midmotion</span>{" "}
+            What Makes <span className="rounded-md bg-primary">300Sass</span>{" "}
             Different.
           </h2>
-          <p className="paragraph">
-            Aliquam a augue suscipit, luctus neque purus ipsum neque dolor
-            primis libero at tempus, blandit posuere ligula varius congue cursus
-            porta feugiat
-          </p>
         </div>
         <div>
           <div id="serviceWrapper">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="grid gap-5 text-center border place-items-center hover:border-primary"
+                className="grid gap-5 text-right border hover:border-primary"
               >
                 <Image
                   src={service.icon}
                   alt={service.label}
-                  width={100}
-                  height={100}
+                  width={80}
+                  height={80}
                   className="object-contain h-auto max-w-[100px] m-auto p-5"
                 />
                 <h4 className="capitalize subtitle">{service.label}</h4>
-                <Button className="button" size="lg">
+                {/* <Button className="button" size="lg">
                   hire us
-                </Button>
-                <p className="paragraph">
-                  Lorem ipsum dolor sit amet consectet adipis sed do eiusmod
-                </p>
+                </Button> */}
+                <p className="paragraph">{service.description}</p>
               </div>
             ))}
           </div>

@@ -19,23 +19,26 @@ const NavBar = () => {
   );
 
   return (
-    <header className="flex items-center justify-around w-full bg-transparent border-b ">
+    <header className="flex items-center justify-start w-full p-2 bg-transparent border-b">
       <div className="logo">
-        <Image
+        {/* <Image
           src="/midmotionLogo.png"
           alt="logo"
           width={100}
           height={100}
           priority
           className="w-auto h-auto -top-20 max-w-[70px]"
-        />
+        /> */}
+        <h1 className="text-[35px]">
+          300<span className="text-green-400">saas</span>
+        </h1>
       </div>
-      <div className="grid w-full m-5 text-2xl text-white place-items-end md:hidden">
+      {/* <div className="grid w-full m-5 text-2xl text-white place-items-end md:hidden">
         <Button onClick={() => setOpenNav(!openNav)}>
           <RxHamburgerMenu />
         </Button>
-      </div>
-      <div
+      </div> */}
+      {/* <div
         id="hamburger"
         className={`absolute w-full h-full top-0 transition-opacity duration-300 z-10 ${
           openNav ? "block" : "hidden"
@@ -65,8 +68,8 @@ const NavBar = () => {
             ))}
           </ul>
         </div>
-      </div>
-      <div className="navlist">
+      </div> */}
+      {/* <div className="navlist">
         <ul className="items-center justify-around hidden gap-5 md:flex">
           {menuItems.map((item) => (
             <li key={item.id}>
@@ -82,7 +85,7 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </header>
   );
 };
