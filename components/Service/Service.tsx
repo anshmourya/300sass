@@ -7,38 +7,38 @@ import { Button } from "../ui/button";
 const Service = () => {
   const services = [
     {
-      label: "Credit Crescendo: $10K SaaS Boost!",
-      icon: "/webDev.svg",
+      label: "Boost business with exclusive perks & rewards",
+      icon: "/reward.svg",
       description:
         "Unlock $10000 worth of credits for top saas tools. Organize, strategize, and boost your productivity to new heights. Streamline your operations seamlessly!",
     },
     {
-      label: "Tool Talk: Expert Reviews Await!",
-      icon: "/videoEditing.svg",
+      label: "Maximize exposure with enhanced visibility",
+      icon: "/money.svg",
       description:
         "Get your tools critiqued by top investors, YC-funded entrepreneurs, and industry leaders. Exclusive monthly reviews await you, offering invaluable insights and exposure.",
     },
     {
-      label: "Shine Bright on 300saas!",
-      icon: "/thumbnail.svg",
+      label: "Amplify reach with integrated marketing support",
+      icon: "/magnify.svg",
       description:
         "Don't just list your tool; amplify it. Featuring on 300saas means exposure to tech influencers and potential investors. Watch as your visibility soars and your traffic spikes",
     },
     {
-      label: "Grow with Proven Strategies!",
-      icon: "/figma.svg",
+      label: "Connect with dedicated SaaS investors",
+      icon: "/trend.svg",
       description:
-        "Tap into the collective wisdom of successful startup veterans.  Gain exclusive access to growth strategies and scaling tips proven to succeed. Flash Card 5",
+        "Tap into the collective wisdom of successful startup veterans.  Gain exclusive access to growth strategies and scaling tips proven to succeed.",
     },
     {
-      label: "Connect & Conquer!",
-      icon: "/figma.svg",
+      label: "Benefit from expert review of your tools",
+      icon: "/growth.svg",
       description:
         "Join a vibrant community of SaaS innovators. Forge connections, collaborate, and open doors to new opportunities",
     },
     {
-      label: "Innovate First: SaaS Exclusives!",
-      icon: "/figma.svg",
+      label: "Expand and evolve within our community",
+      icon: "/rocket.svg",
       description:
         "Get early access to the latest SaaS products and features. Stay ahead of the curve and constantly innovate with 300saas.",
     },
@@ -62,16 +62,16 @@ const Service = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="grid gap-5 text-right border hover:border-primary"
+                className="grid gap-5 text-right border hover:shadow-stone-400 shadow-left"
               >
                 <Image
                   src={service.icon}
                   alt={service.label}
                   width={80}
                   height={80}
-                  className="object-contain h-auto max-w-[100px] m-auto p-5"
+                  className="object-contain h-auto max-w-[100px] m-auto p-5 text-white hover:text-green-400"
                 />
-                <h4 className="capitalize subtitle">{service.label}</h4>
+                <h2 className="capitalize subtitle ">{service.label}</h2>
                 {/* <Button className="button" size="lg">
                   hire us
                 </Button> */}

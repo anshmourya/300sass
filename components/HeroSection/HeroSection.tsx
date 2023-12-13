@@ -58,6 +58,7 @@ const promise = databases.createDocument(
 if (promise !== null) {
   alert("Thanks for joining us!")
 }
+setMail("");
     } catch (error) {
       if (error instanceof z.ZodError) {
         alert(error.errors[0].message);
@@ -86,17 +87,19 @@ if (promise !== null) {
                     {/* and <span className="text-yellowish font-heading-font " ref={el} ></span> */}
                   </h1>
                   <p className="max-w-[60%] m-auto paragraph my-6 font-helvetica">
-                  300SaaS platform is currently invite-only. Sign up to get early access!
+                  300SaaS is currently invite-only. Sign up to get early access!
                   </p>
-                  <div className="flex justify-center my-10">
+                  <div className="flex justify-center mt-10 mb-6">
                     
                     <Input
                       placeholder="Email"
                       className="h-11 max-w-[450px] bg-[#121212]"
+                      
                       onChange={handleChange}
+                      value={mail}
                     />
                   </div>
-                  <Button className="p-4 text-xl transition-transform duration-500 ease-in-out transform hover:scale-110" style={{backgroundColor: "#88e73b"}} onClick={handleSubmit}>Join us</Button>
+                  <Button className=" p-4 text-xl transition-transform duration-500 ease-in-out transform hover:scale-110" style={{backgroundColor: "#88e73b"}} onClick={handleSubmit}>Join us</Button>
                   <div className="text-left mt-60">
                     {/* <h3 className="flex items-center header">
                       <Button variant="link" className="header">

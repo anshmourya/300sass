@@ -31,11 +31,11 @@ const Timer = () => {
   return (
     <div>
       {timeLeft ? (
-        <div className='absolute right-5 top-2 text-3xl max-md:hidden gradient-text'>
+        <div className='absolute right-5 top-3 text-3xl max-md:hidden gradient-text'>
          <p>{timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}</p>
         </div>
       ) : (
-        <p className='absolute right-5 top-2 text-3xl max-md:hidden gradient-text'>Loading...</p>
+        <p className='absolute right-5 top-3 text-3xl max-md:hidden gradient-text'>Loading...</p>
       )}
     </div>
   );
