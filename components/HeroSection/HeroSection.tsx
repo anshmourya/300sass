@@ -70,13 +70,13 @@ if (promise !== null) {
 
   return (
     <section id="hero" className="grid h-screen place-items-center">
-      <div className="shape-1">
+      {/* <div className="shape-1">
         <Image src="/Mask.png" width={100} height={100} alt="mask image" />
-      </div>
-      <div className="shape-2">
+      </div> */}
+      {/* <div className="shape-2">
         <Image src="/Mask.png" width={100} height={100} alt="mask image" />
-      </div>
-      <div className="m-auto text-center hero h-1/2 w-1/2">
+      </div> */}
+      <div className="m-auto text-center hero h-1/2  w-1/2 ">
       
         <h1 className="text-6xl font-heading-font" style={{fontWeight: 500}}>
           Join our waitlist to<br />  <span className="gradient-text">boost your SaaS journey</span>

@@ -8,7 +8,7 @@ const Service = () => {
   const services = [
     {
       label: "Credit Crescendo: $10K SaaS Boost!",
-      icon: "/webdev.svg",
+      icon: "/webDev.svg",
       description:
         "Unlock $10000 worth of credits for top saas tools. Organize, strategize, and boost your productivity to new heights. Streamline your operations seamlessly!",
     },
