@@ -44,9 +44,12 @@ const HeroSection = () => {
     try {
       const data = schema.parse({ email: mail });
       if (mail === "") { 
-        alert("Please enter your email")
+        toast("Please enter your email")
         return;
       }
+
+    
+
 const promise = databases.createDocument(
   "6578580d5baf2395a5ec",
   "6578581bde4a889d90b4",
