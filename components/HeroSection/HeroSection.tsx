@@ -106,7 +106,7 @@ setMail("");
                       value={mail}
                     />
                   </div>
-                  <Button className=" p-4 text-xl transition-transform duration-500 ease-in-out transform hover:scale-110" style={{backgroundColor: "#88e73b"}} onClick={handleSubmit}>Join us</Button>
+                  <Button className=" p-4 text-xl transition-transform duration-500 ease-in-out transform hover:scale-110" style={{backgroundColor: "#88e73b"}} onClick={handleSubmit}>Join waitlist</Button>
                   <div className="text-left mt-60">
                     {/* <h3 className="flex items-center header">
                       <Button variant="link" className="header">

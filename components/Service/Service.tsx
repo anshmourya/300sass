@@ -53,8 +53,8 @@ const Service = () => {
       <div className="container m-auto text-center">
         <div className="max-w-[800px] m-auto">
           <h2 className="mb-5 title">
-            What Makes <span className="rounded-lg bg-yellowish gradient-text">300Sass</span>{" "}
-            Different.
+            What Makes <span className="rounded-lg bg-yellowish gradient-text">300SaaS</span>{" "}
+            Different ?
           </h2>
         </div>
         <div>
@@ -80,7 +80,9 @@ const Service = () => {
             ))}
           </div>
         </div>
+        <p className="opacity-30 text-2xl">and more...</p>
       </div>
+      
     </section>
   );
 };
