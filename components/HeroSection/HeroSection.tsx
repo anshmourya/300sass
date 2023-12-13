@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import Typed from "typed.js";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { FaMailBulk } from "react-icons/fa";
@@ -36,7 +35,7 @@ client
 // });
 const HeroSection = () => {
   const [mail, setMail] = useState("");
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setMail(e.target.value);
   }
   const handleSubmit = async () => {
