@@ -29,6 +29,12 @@ const NavBar = () => {
           300<span className="gradient-text">saas</span>
         </h1>
       </div>
+      
+      <a href="https://twitter.com/join300saas" target="_blank" rel="noopener noreferrer" className="mb-6">
+  <img src="/icons8-twitter.svg" width={25} height={25} alt="" className="lg:left-1/2 absolute max-md:right-4" />
+</a>
+
+
       <Timer />
       
     </header>

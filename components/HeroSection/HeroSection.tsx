@@ -86,14 +86,14 @@ setMail("");
       </div> */}
       <div className="m-auto text-center hero h-1/2  w-1/2 ">
       
-        <h1 className="text-6xl font-heading-font" style={{fontWeight: 500}}>
+        <h1 className="text-6xl font-heading-fon max-md:text-5xl" style={{fontWeight: 500}}>
           Join our waitlist to<br />  <span className="gradient-text">boost your SaaS journey</span>
         </h1> 
         <h1 className="my-6 title font-heading-font">
           
                     {/* and <span className="text-yellowish font-heading-font " ref={el} ></span> */}
                   </h1>
-                  <p className="max-w-[60%] m-auto paragraph my-6 font-helvetica">
+                  <p className="max-w-[60%] m-auto paragraph my-6 font-helvetica max-md:text-xl">
                   300SaaS is currently invite-only. Sign up to get early access!
                   </p>
                   <div className="flex justify-center mt-10 mb-6">
