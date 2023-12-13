@@ -7,6 +7,8 @@ import "../HeroSection/HeroSection.css"
 import { blob } from "stream/consumers";
 import { Client, Databases, ID } from "appwrite";
 import { z } from 'zod';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
 
 // Define the schema
 const schema = z.object({
@@ -55,12 +57,15 @@ const promise = databases.createDocument(
 
 );
 if (promise !== null) {
-  alert("Thanks for joining us!")
+
+  toast.success("Thank you for joining us! We will get back to you soon.", {
+    theme: "colored"
+  })
 }
 setMail("");
     } catch (error) {
       if (error instanceof z.ZodError) {
-        alert(error.errors[0].message);
+        toast.warn(error.errors[0].message, {theme: "colored"});
       } else {
         console.log(error);
       }
