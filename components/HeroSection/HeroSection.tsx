@@ -1,28 +1,73 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { FaMailBulk } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 import "../HeroSection/HeroSection.css"
-const HeroSection = () => {
-  // const el = useRef(null);
-  // //typing text animation
-  // useEffect(() => {
-  //   // Create a Typed instance here
-  //   const typed = new Typed(el.current, {
-  //     strings: ["showcase your gem.", "make inovation."],
-  //     typeSpeed: 100,
-  //     backSpeed: 40,
-  //     backDelay: 100,
-  //     loop: true,
-  //   });
+import { blob } from "stream/consumers";
+import { Client, Databases, ID } from "appwrite";
+import { z } from 'zod';
 
-  //   // Clean up the Typed instance on component unmount
-  //   return () => {
-  //     typed.destroy();
-  //   };
-  // }, []);
+// Define the schema
+const schema = z.object({
+  email: z.string().email().min(6),
+});
+const client = new Client();
+
+const databases = new Databases(client);
+
+client
+    .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
+    .setProject('657857ea1306b8743ef8') // Your project ID
+;
+
+// const promise = databases.listDocuments(
+//   "6578580d5baf2395a5ec",
+//   "6578581bde4a889d90b4",
+//   ID.unique(),
+
+// );
+
+// promise.then(function (response) {
+//     console.log(response); // Success
+// }, function (error) {
+//     console.log(error); // Failure
+// });
+const HeroSection = () => {
+  const [mail, setMail] = useState("");
+  const handleChange = (e) => {
+    setMail(e.target.value);
+  }
+  const handleSubmit = async () => {
+    try {
+      const data = schema.parse({ email: mail });
+      if (mail === "") { 
+        alert("Please enter your email")
+        return;
+      }
+const promise = databases.createDocument(
+  "6578580d5baf2395a5ec",
+  "6578581bde4a889d90b4",
+  ID.unique(),
+  {
+    email: data.email
+  }
+
+);
+if (promise !== null) {
+  alert("Thanks for joining us!")
+}
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        alert(error.errors[0].message);
+      } else {
+        console.log(error);
+      }
+    }
+  }
+
+
   return (
     <section id="hero" className="grid h-screen place-items-center">
       <div className="shape-1">
@@ -31,9 +76,9 @@ const HeroSection = () => {
       <div className="shape-2">
         <Image src="/Mask.png" width={100} height={100} alt="mask image" />
       </div>
-      <div className="m-auto text-center hero">
+      <div className="m-auto text-center hero h-1/2 w-1/2">
       
-        <h1 className="my-6 header font-heading-font" >
+        <h1 className="text-6xl font-heading-font" style={{fontWeight: 500}}>
           Join our waitlist to<br />  <span className="gradient-text">boost your SaaS journey</span>
         </h1> 
         <h1 className="my-6 title font-heading-font">
@@ -48,9 +93,10 @@ const HeroSection = () => {
                     <Input
                       placeholder="Email"
                       className="h-11 max-w-[450px] bg-[#121212]"
+                      onChange={handleChange}
                     />
                   </div>
-                  <Button className="p-4 text-xl transition-transform duration-500 ease-in-out transform hover:scale-110" style={{backgroundColor: "#88e73b"}}>Join us</Button>
+                  <Button className="p-4 text-xl transition-transform duration-500 ease-in-out transform hover:scale-110" style={{backgroundColor: "#88e73b"}} onClick={handleSubmit}>Join us</Button>
                   <div className="text-left mt-60">
                     {/* <h3 className="flex items-center header">
                       <Button variant="link" className="header">
