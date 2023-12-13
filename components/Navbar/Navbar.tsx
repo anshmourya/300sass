@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { Link } from "react-scroll";
 import React, { useMemo, useState } from "react";
+import saaslogo from 'next/300saas.jpg'
+import "../Navbar/Navbar.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiSplitCross } from "react-icons/gi";
 import { Button } from "../ui/button";
@@ -29,8 +31,8 @@ const NavBar = () => {
           priority
           className="w-auto h-auto -top-20 max-w-[70px]"
         /> */}
-        <h1 className="text-[35px]">
-          300<span className="text-green-400">saas</span>
+       <h1 className="text-4xl text-gradient">
+          300<span className="gradient-text">saas</span>
         </h1>
       </div>
       {/* <div className="grid w-full m-5 text-2xl text-white place-items-end md:hidden">
