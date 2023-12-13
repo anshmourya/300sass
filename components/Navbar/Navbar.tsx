@@ -2,9 +2,12 @@
 import Image from "next/image";
 import { Link } from "react-scroll";
 import React, { useMemo, useState } from "react";
+import saaslogo from 'next/300saas.jpg'
+import "../Navbar/Navbar.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiSplitCross } from "react-icons/gi";
 import { Button } from "../ui/button";
+import Timer from "../ui/Timer";
 const NavBar = () => {
   const [openNav, setOpenNav] = useState<boolean>(false);
   const menuItems = useMemo(
@@ -21,71 +24,19 @@ const NavBar = () => {
   return (
     <header className="flex items-center justify-start w-full p-2 bg-transparent border-b">
       <div className="logo">
-        {/* <Image
-          src="/midmotionLogo.png"
-          alt="logo"
-          width={100}
-          height={100}
-          priority
-          className="w-auto h-auto -top-20 max-w-[70px]"
-        /> */}
-        <h1 className="text-[35px]">
-          300<span className="text-green-400">saas</span>
+        
+       <h1 className="text-4xl text-gradient">
+          300<span className="gradient-text">saas</span>
         </h1>
       </div>
-      {/* <div className="grid w-full m-5 text-2xl text-white place-items-end md:hidden">
-        <Button onClick={() => setOpenNav(!openNav)}>
-          <RxHamburgerMenu />
-        </Button>
-      </div> */}
-      {/* <div
-        id="hamburger"
-        className={`absolute w-full h-full top-0 transition-opacity duration-300 z-10 ${
-          openNav ? "block" : "hidden"
-        }`}
-      >
-        <div className="w-full bg-white mobile-list">
-          <ul className="relative flex flex-col items-center justify-center gap-7 p-14">
-            <Button
-              variant="ghost"
-              className="absolute text-2xl text-black right-10 top-4"
-              onClick={() => setOpenNav(!openNav)}
-            >
-              <GiSplitCross />
-            </Button>
-            {menuItems.map((item) => (
-              <li key={item.id}>
-                <Link
-                  to={item.href}
-                  className="font-semibold text-black cursor-pointer "
-                  activeClass="active"
-                  smooth
-                  spy
-                >
-                  {item.text}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div> */}
-      {/* <div className="navlist">
-        <ul className="items-center justify-around hidden gap-5 md:flex">
-          {menuItems.map((item) => (
-            <li key={item.id}>
-              <Link
-                to={item.href}
-                activeClass="active"
-                smooth
-                spy
-                className="text-white cursor-pointer"
-              >
-                {item.text}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div> */}
+      
+      <a href="https://twitter.com/join300saas" target="_blank" rel="noopener noreferrer" className="mb-6">
+  <img src="/icons8-twitter.svg" width={25} height={25} alt="" className="lg:left-1/2 absolute max-md:right-4" />
+</a>
+
+
+      <Timer />
+      
     </header>
   );
 };

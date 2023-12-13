@@ -16,7 +16,15 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        'helvetica': ['Helvetica', 'Arial', 'sans-serif'],
+
+        'heading-font': ["Roboto", "sans-serif"],
+        'custom-font': ["ui-sans-serif","system-ui","-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue","Arial","Noto Sans","sans-serif","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"],
+      },
       colors: {
+        'yellowish': "#9eeb5f",
+        'silverish': "c0c0c0",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
